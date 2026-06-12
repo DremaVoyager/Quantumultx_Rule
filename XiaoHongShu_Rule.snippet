@@ -1,22 +1,31 @@
-# NAME: xiaohongshu
+# NAME: XiaoHongShu
 # AUTHOR: blackmatrix7 (Modified V5)
 # UPDATED: 2026-06-11
 
-HOST-SUFFIX,jxnceee.com,xiaohongshu
-HOST-SUFFIX,apppush-rws.xiaohongshu.com,xiaohongshu
-HOST,edith.xiaohongshu.com,xiaohongshu
-HOST,xiaohongshu.com,xiaohongshu
-HOST,t2.xiaohongshu.com,xiaohongshu
-HOST,apm-fe.xiaohongshu.com,xiaohongshu
-HOST,gator.volces.com,xiaohongshu
-HOST,mcs.zijieapi.com,xiaohongshu
-HOST,dns.weixin.qq.com.cn,xiaohongshu
-HOST,cn-beijing.log.aliyuncs.com,xiaohongshu
-HOST,px.effirst.com,xiaohongshu
-HOST,s-gm.mmstat.com,xiaohongshu
-HOST-KEYWORD,xiaohongshu,xiaohongshu
-HOST-KEYWORD,xhscdn,xiaohongshu
-HOST-SUFFIX,fengkongcloud.com,xiaohongshu
-HOST-SUFFIX,xhscdn.com,xiaohongshu
-HOST-SUFFIX,xhscdn.net,xiaohongshu
-HOST-SUFFIX,xiaohongshu.com,xiaohongshu
+# --- 1. 强效覆盖：绕过本地校园网/运营商 DNS 劫持 ---
+# 将被劫持的教育网域名和小红书真实推送 API 强制走代理
+HOST-SUFFIX,jxnceee.com,XiaoHongShu
+HOST-SUFFIX,apppush-rws.xiaohongshu.com,XiaoHongShu
+
+# --- 2. 核心数据与 API 网关 (必须确保这条生效) ---
+HOST,edith.xiaohongshu.com,XiaoHongShu
+
+# --- 3. 直播与视频 SDK 依赖 ---
+HOST,t2.xiaohongshu.com,XiaoHongShu
+HOST,apm-fe.xiaohongshu.com,XiaoHongShu
+HOST,gator.volces.com,XiaoHongShu
+HOST,mcs.zijieapi.com,XiaoHongShu
+HOST,dns.weixin.qq.com.cn,XiaoHongShu
+
+# --- 4. 兼容网页端埋点，防止 JS 报错 ---
+HOST,cn-beijing.log.aliyuncs.com,XiaoHongShu
+HOST,px.effirst.com,XiaoHongShu
+HOST,s-gm.mmstat.com,XiaoHongShu
+
+# --- 5. 兜底匹配 ---
+HOST-KEYWORD,xiaohongshu,XiaoHongShu
+HOST-KEYWORD,xhscdn,XiaoHongShu
+HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.net,XiaoHongShu
+HOST-SUFFIX,xiaohongshu.com,XiaoHongShu
