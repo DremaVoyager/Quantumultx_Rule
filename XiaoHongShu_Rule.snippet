@@ -1,0 +1,18 @@
+# NAME: XiaoHongShu
+# AUTHOR: blackmatrix7 (优化版)
+
+# --- 强制放行直播/视频 SDK 依赖域名 ---
+HOST,gator.volces.com,XiaoHongShu
+HOST,mcs.zijieapi.com,XiaoHongShu
+
+# 小红书自有的一些可能影响直播间数据加载的接口
+HOST,t2.xiaohongshu.com,XiaoHongShu
+HOST,apm-fe.xiaohongshu.com,XiaoHongShu
+
+# 腾讯 HTTPDNS (有时 App 必须通过它来获取最优的直播 CDN 节点，如果拦截导致黑屏可放行)
+# HOST,dns.weixin.qq.com.cn,XiaoHongShu
+
+HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.net,XiaoHongShu
+HOST-SUFFIX,xiaohongshu.com,XiaoHongShu
