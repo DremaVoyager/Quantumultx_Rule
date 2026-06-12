@@ -1,18 +1,26 @@
 # NAME: XiaoHongShu
-# AUTHOR: blackmatrix7 (Modified)
+# AUTHOR: blackmatrix7 (Modified V3)
 # UPDATED: 2026-06-11
-# HOST: 5
-# HOST-SUFFIX: 4
-# TOTAL: 9
 
-# --- 新增：强制放行直播、视频 SDK 与前端调度依赖 ---
+# --- 1. 强效覆盖：防止去广告规则的高优先级误杀 ---
+# 使用关键词匹配，优先级高于普通的 HOST-SUFFIX
+HOST-KEYWORD,xiaohongshu,XiaoHongShu
+HOST-KEYWORD,xhscdn,XiaoHongShu
+
+# --- 2. 临时测试放行：极易引发 Web 端 JS 报错的第三方埋点 ---
+# 很多时候网页端拦截了这些，会导致整个页面的渲染逻辑卡死
+HOST,cn-beijing.log.aliyuncs.com,XiaoHongShu
+HOST,px.effirst.com,XiaoHongShu
+HOST,s-gm.mmstat.com,XiaoHongShu
+
+# --- 3. 直播与视频 SDK 依赖 ---
 HOST,t2.xiaohongshu.com,XiaoHongShu
 HOST,apm-fe.xiaohongshu.com,XiaoHongShu
 HOST,gator.volces.com,XiaoHongShu
 HOST,mcs.zijieapi.com,XiaoHongShu
 HOST,dns.weixin.qq.com.cn,XiaoHongShu
 
-# --- 原有：小红书核心 API 与 CDN 节点 ---
+# --- 4. 核心 API 与 CDN 节点 ---
 HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
 HOST-SUFFIX,xhscdn.com,XiaoHongShu
 HOST-SUFFIX,xhscdn.net,XiaoHongShu
