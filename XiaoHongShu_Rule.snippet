@@ -1,31 +1,27 @@
-# NAME: xiaohongshu
-# AUTHOR: blackmatrix7 (Modified V5)
+# NAME: XiaoHongShu
+# AUTHOR: blackmatrix7 (Modified V3)
 # UPDATED: 2026-06-11
 
-# --- 1. 强效覆盖：绕过本地校园网/运营商 DNS 劫持 ---
-# 将被劫持的教育网域名和小红书真实推送 API 强制走代理
-HOST-SUFFIX,jxnceee.com,xiaohongshu
-HOST-SUFFIX,apppush-rws.xiaohongshu.com,xiaohongshu
+# --- 1. 强效覆盖：防止去广告规则的高优先级误杀 ---
+# 使用关键词匹配，优先级高于普通的 HOST-SUFFIX
+HOST-KEYWORD,xiaohongshu,XiaoHongShu
+HOST-KEYWORD,xhscdn,XiaoHongShu
 
-# --- 2. 核心数据与 API 网关 (必须确保这条生效) ---
-HOST,edith.xiaohongshu.com,xiaohongshu
+# --- 2. 临时测试放行：极易引发 Web 端 JS 报错的第三方埋点 ---
+# 很多时候网页端拦截了这些，会导致整个页面的渲染逻辑卡死
+HOST,cn-beijing.log.aliyuncs.com,XiaoHongShu
+HOST,px.effirst.com,XiaoHongShu
+HOST,s-gm.mmstat.com,XiaoHongShu
 
 # --- 3. 直播与视频 SDK 依赖 ---
-HOST,t2.xiaohongshu.com,xiaohongshu
-HOST,apm-fe.xiaohongshu.com,xiaohongshu
-HOST,gator.volces.com,xiaohongshu
-HOST,mcs.zijieapi.com,xiaohongshu
-HOST,dns.weixin.qq.com.cn,xiaohongshu
+HOST,t2.xiaohongshu.com,XiaoHongShu
+HOST,apm-fe.xiaohongshu.com,XiaoHongShu
+HOST,gator.volces.com,XiaoHongShu
+HOST,mcs.zijieapi.com,XiaoHongShu
+HOST,dns.weixin.qq.com.cn,XiaoHongShu
 
-# --- 4. 兼容网页端埋点，防止 JS 报错 ---
-HOST,cn-beijing.log.aliyuncs.com,xiaohongshu
-HOST,px.effirst.com,xiaohongshu
-HOST,s-gm.mmstat.com,xiaohongshu
-
-# --- 5. 兜底匹配 ---
-HOST-KEYWORD,xiaohongshu,xiaohongshu
-HOST-KEYWORD,xhscdn,xiaohongshu
-HOST-SUFFIX,fengkongcloud.com,xiaohongshu
-HOST-SUFFIX,xhscdn.com,xiaohongshu
-HOST-SUFFIX,xhscdn.net,xiaohongshu
-HOST-SUFFIX,xiaohongshu.com,xiaohongshu
+# --- 4. 核心 API 与 CDN 节点 ---
+HOST-SUFFIX,fengkongcloud.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.com,XiaoHongShu
+HOST-SUFFIX,xhscdn.net,XiaoHongShu
+HOST-SUFFIX,xiaohongshu.com,XiaoHongShu
